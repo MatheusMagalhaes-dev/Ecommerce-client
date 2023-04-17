@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { get } from 'svelte/store';
+
     export let data;
 </script>
+
+
 
 <h1>Produtos</h1>
 

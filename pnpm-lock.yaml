@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  svelte-forms-lib:
+    specifier: ^2.0.1
+    version: 2.0.1
+
 devDependencies:
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
@@ -686,6 +691,11 @@ packages:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /dequal@2.0.3:
+    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /detect-indent@6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
@@ -1556,6 +1566,12 @@ packages:
       - stylus
       - sugarss
     dev: true
+
+  /svelte-forms-lib@2.0.1:
+    resolution: {integrity: sha512-kwbJ3ynsepsrrJyAMrvSc0Lj/myc9vfI2DL8OKxgArZimrNYsRh1gENYhvrcKEI3BiZrv8q3VFfmGo/GMyk7Zg==}
+    dependencies:
+      dequal: 2.0.3
+    dev: false
 
   /svelte-hmr@0.15.1(svelte@3.54.0):
     resolution: {integrity: sha512-BiKB4RZ8YSwRKCNVdNxK/GfY+r4Kjgp9jCLEy0DuqAKfmQtpL38cQK3afdpjw4sqSs4PLi3jIPJIFp259NkZtA==}
