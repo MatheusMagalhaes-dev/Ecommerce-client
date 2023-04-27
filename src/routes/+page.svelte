@@ -1,42 +1,35 @@
 <script lang="ts">
-
+	import CardProduct from "$lib/components/cards/card-product/card-product.svelte";
     export let data;
 </script>
-<h3 class="userLogin">Login</h3>
+
 
 <h1>Produtos</h1>
 
-<grid container spacing={3}>
-<ul>
-    {#each data.products as {_id, name, description, price}}
+<ul class="products">
+    {#each data.products as product}
         <li>
-            <a href="/products/{_id}">
-            <h2>{name}</h2>
-            <p>{description}</p>
-
-            <footer>
-                <span>R${price}</span>
-            </footer>
+            <a href="/products/{product._id}">
+            <CardProduct {product} />
             </a>
         </li>
     {/each}
 </ul>
-</grid>
 
-<style>
-    .userLogin {
-      
-    }
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        list-style: none;
-        padding: 0;
+<style lang="scss" global>
+    h1 {
+        @apply text-3xl mb-8;
     }
 
-    ul > li {
-        background-color: #dcdcdc;
-        border: 1px solid #333333;
+    ul.products {
+        @apply grid grid-flow-col auto-cols-fr gap-4;
+
+        & > li {
+            @apply col-auto;
+
+            & > a {
+                @apply block;
+            }
+        }
     }
 </style>

@@ -3,6 +3,7 @@ import type { IProduct } from './product.interface';
 
 
 export interface IOrder extends TTimestamps {
+  _id: string;
   user: string;
   deliveryAddress: IAddress;
   totalPrice: number;
