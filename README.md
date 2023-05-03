@@ -36,3 +36,9 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+-------------------------------------------------
+
+This repository is the front-end of the [`Ecommerce`](https://github.com/MatheusMagalhaes-dev/Ecommerce) that was already posted, this ecommerce api was produced in node, with typescript, and manipulated in the front-end with svelte.
+
+First API created by me.
