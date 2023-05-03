@@ -22,13 +22,13 @@
     }
 
     ul.products {
-        @apply grid grid-flow-col auto-cols-fr gap-4;
+        @apply grid grid-cols-3 auto-cols-fr gap-4;
 
         & > li {
-            @apply col-auto;
+            @apply w-full;
 
             & > a {
-                @apply block;
+                @apply w-full block;
             }
         }
     }

@@ -1,3 +1,10 @@
+<script lang="ts">
+	import { page } from "$app/stores";
+	import type { IUser } from "$lib/ts";
+
+	$: session = $page.data.session as IUser;
+</script>
+
 <header>
 	<div class="wrapper">
 		<a href="/">
@@ -7,7 +14,13 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="/auth"> Login </a>
+					{#if session}
+					<form action="/auth/logout" method="post">
+						<button>{session.name}</button>
+					</form>
+					{:else}
+						<a href="/auth"> Login </a>
+					{/if}
 				</li>
 			</ul>
 		</nav>
@@ -27,7 +40,7 @@
 
 			& > nav {
 				& > ul {
-					@apply flex items-center space-x-4; 
+					@apply flex items-center space-x-4;
 
 					& > li {
 						@apply btn btn-ghost link-hover;

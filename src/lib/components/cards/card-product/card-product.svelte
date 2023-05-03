@@ -17,7 +17,7 @@
 
 <style lang="scss" global>
 	article.product {
-		@apply card card-bordered bg-base-200;
+		@apply card card-bordered bg-base-200 w-full;
 		
 		& > .card-body {
 			& > h2 {
@@ -25,13 +25,13 @@
 			}
 
 			& > p {
-				@apply text-base-content/75 text-sm mb-4;
+				@apply text-base-content/75 text-sm mb-8;
 			}
 
 			& > footer {
 				
 				& > span.price {
-					@apply block text-2xl text-primary ml-auto;
+					@apply block text-2xl text-primary;
 				}
 			}
 		}
